@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-in</title>
+    <link rel="stylesheet" href="../css/sign-in.css">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+</head>
+<body>
+    <div class="main-login">
+
+        <div class="left-login">
+            <h1>Faça o Login <br>Entre para o nosso Time</h1>
+            <img src="../img/girl_using_pc.svg" class="left-img" alt="girl using pc to login">
+        </div>
+
+        <div class="right-login">
+            <div class="card-login">
+                <h1>Log In</h1>
+                <div class="switch-mode" id="switch-mode">
+                    <p class="switch1">Sign-in</p>
+                    <div class="trilho" id="trilho">
+                        <div class="indicador"></div>
+                    </div>
+                    <p class="switch2">Sign-up</p>
+                </div>
+                
+
+                <div id="msgError"></div>
+
+                <div class="textfield">
+                    <label id="labelUser" for="usuario">User</label>
+                    <input type="text" name="Usuario" placeholder="User" id="user" required>
+
+                </div>
+                <div class="textfield" id="field2">
+                    <label id="labelPassword" for="password">Password</label>
+                    <input type="password" name="password" placeholder="Password" id="password" required>
+                    <i class="fa fa-eye" aria-hidden="true" id="btnPassword"></i>
+                </div>
+
+                <button class="btn-login" onclick="login()">Login</button>
+
+                <div id="msgError1"></div>
+            </div>
+        </div>
+   </div>
+   <script src="../js/singin.js"></script>
+</body>
+</html>

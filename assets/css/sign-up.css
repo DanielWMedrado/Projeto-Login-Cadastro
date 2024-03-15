@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body, *{
+    margin: 0;
+    font-family: 'Noto Sans', sans-serif    ;
+    box-sizing: border-box;
+}
+
+:root{
+    --color-bakcground: #201b2c;
+    --color-base: null;
+    --color-first-plan: #2f2841;
+    --color-title: #00ff88;
+    --second-color-title: #77ffc0;
+    --color-text: #f0ffffde;
+}
+
+
+.main-login{
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--color-bakcground);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-login{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.left-login > h1{
+    margin-left: 5px;
+    font-size: 3vw;
+    color: var(--color-title);
+}
+
+.left-img{
+    width: 30vw;
+
+}
+
+.right-login{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-login{
+    display: flex;
+    width: 70%;
+    height: 70vh;
+    padding: 30px 35px ;
+    border-radius: 20px;
+    background-color: var(--color-firt-plan);
+    box-shadow: 0px 10px 40px #00000056;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card-login > h1{
+    color: var(--color-title);
+    font-weight: 800;
+    margin: 0;
+}
+
+.switch-mode{
+    display: flex;
+    align-items: center;
+    color: white;
+    font-weight: 900;
+    margin: 10px 0px;
+}
+
+.switch-mode > p{
+    margin: 10px 13px;
+}
+
+.switch1{
+    color: #fff;
+    transition: .5s;
+    transform: scale(1);
+}
+
+.switch2{
+    color: #00ff88;
+    transition: .5s;
+    transform: scale(1.2);
+}
+
+
+.switch-mode.switchM > .switch1{
+    color: #00ff88;
+    transform: scale(1.2);
+}
+
+.switch-mode.switchM > .switch2{
+    color: #fff;
+    transform: scale(1);
+}
+
+.trilho{
+    width: 40px;
+    height: 20px;
+    background-color: #514869;
+    border-radius: 10px;
+    position: relative;
+}
+
+.trilho .indicador{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: var(--color-title);
+    transform: scale(.8);
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    transition: .5s ease-in-out;
+}
+
+.trilho.sing-up{
+    background-color: null;
+}
+
+.trilho.sing-up .indicador{
+    right: 20px;
+    
+}
+
+.textfield{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 15px 0;
+}
+
+.textfield > input{
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    border: 2px solid #514869;
+    padding: 15px;
+    background-color: #514869;
+    box-shadow: 0px 10px 40px #00000056;
+    color: var(--color-text);
+    font-size: 12pt;
+    box-sizing: border-box;
+}
+
+.textfield > label{
+    color: var(--color-text);
+    margin-bottom: 10px;
+    
+}
+
+.textfield > input::placeholder{
+    color: #f0ffff94;
+}
+
+.textfield > input:hover{
+    border: 2px solid white;
+}
+
+.textfield  i{
+    font-size: 25px;
+    cursor: pointer;
+
+    position: absolute;
+    right: 5%;
+    top: 55%;
+    color: white;
+    font-weight: 100;
+    transition: .2s ease-in-out;
+}
+
+.textfield i.showPass{
+    color: var(--color-bakcground);
+}
+
+.textfield i.showConfirmPass{
+    color: var(--color-bakcground);
+}
+
+.textfield  i:hover{
+    transform: scale(1.2);
+}
+
+.btn-signup{
+    width: 100%;
+    margin: 25px;
+    padding: 16px 0;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: var(--color-bakcground);
+    background-color: var(--color-title);
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #00ff8052;
+}
+
+.btn-login:hover{
+    transform: scale(1.1);
+    transition: 0.25s ease;
+    border: 2px solid rgb(255, 255, 255);
+}
+
+/* Estilos para o spinner de loading */
+.loader {
+    border: 8px solid var(--color-title);
+    border-top: 8px solid var(--color-bakcground);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Classe para esconder elementos */
+.hidden {
+    display: none;
+}
+
+    
+@media only screen and (max-width: 1250px) {
+    .card-login{
+        height: auto;
+    }
+
+    .textfield{
+        margin: 10px 0;
+    }
+
+    .left-login > h1{
+        font-size: 4vw;
+        margin-left: 40px;
+    }
+    
+    .left-img{
+        width: 40vw;
+    
+    }
+
+
+    
+}
+
+
+@media only screen and (max-width: 950px) {
+    .card-login{
+        width: 70%;
+    }
+
+    .switch-mode > p{
+        font-size: 14px;
+        margin: 5px 15px;
+        font-weight: 600;
+    }
+}
+
+@media only screen and (max-width: 600px)  {
+    .main-login{
+        flex-direction: column;
+    }
+    .left-login > h1{
+        display: none;
+    }
+    .left-login{
+        width: 100%;
+        height: auto;
+    }
+
+
+    .right-login{
+        width: 100%;
+        height: auto;
+    }
+
+    .left-img{
+        width: 50vw;
+    }
+
+    .card-login{
+        width: 90%;
+    }
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up</title>
+    <link rel="stylesheet" href="../css/sign-up.css">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+</head>
+<body>
+    <div class="main-login">
+
+        <div class="left-login">
+            <h1>Efetue o cadastro! <br>E faça parte do nosso Time!</h1>   
+            <img src="../img/sign-up-animate.svg" class="left-img" alt="girl using pc to login">
+        </div>
+
+        <div class="right-login">
+            <div class="card-login">
+                <h1>Sing-up</h1>
+                <div class="switch-mode" id="switch-mode">
+                    <p class="switch1">Sign-in</p>
+                    <div class="trilho" id="trilho">
+                        <div class="indicador"></div>
+                    </div>
+                    <p class="switch2">Sign-up</p>
+                </div>
+                
+
+                <div id="msgError" class="msgError"></div>
+                <div id="msgSuccess" class="msgSuccess"></div>
+
+                <div class="textfield">
+                    <label for="usuario" id="labelName">Name</label>
+                    <input type="text" name="Name" placeholder="Name" id="name">
+
+                </div>
+                <div class="textfield">
+                    <label id="labelUser" for="usuario">User</label>
+                    <input type="text" name="Usuario" placeholder="User" id="user" required>
+
+                </div>
+                <div class="textfield">
+                    <label id="labelPassword" for="password">Password</label>
+                    <input type="password" name="password" placeholder="Password" id="password" required>
+                    <i class="fa fa-eye" aria-hidden="true" id="btnPassword"></i>
+                </div>
+                <div class="textfield">
+                    <label for="password" id="labelConfirmPass">Confirm Password</label>
+                    <input type="password" name="password" placeholder="Confirm Password" id="confirmPass">
+                    <i class="fa fa-eye" aria-hidden="true" id="btnConfirmPassword"></i>
+                </div>
+
+                <button class="btn-signup" onclick="signup()">Sing-up</button>
+
+            </div>
+
+            <div id="loading-container" class="hidden">
+                <div class="loader"></div>
+                <p>Cadastrando usuário...</p>
+            </div>
+        </div>
+   </div>
+   <script src="../js/singup.js"></script>
+</body>
+</html>
